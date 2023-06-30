@@ -82,22 +82,21 @@ def Name_List():
         if file_uploader is not None:
             file_path = file_uploader.name 
             st.success("File Uploaded Successfully...")
-            st.snow()       
+      
         file = open(file_path,"r")    
         for names in file:
             Name_List_Data.append(names.strip())
             
         st.write(Name_List_Data)
-        st.snow()
+
 
 def generate_certificate():
-    st.snow()
+
     coordinate_1 = st.text_input("Enter Coordinate 1 : ",placeholder="X Coordinate")
     
     if coordinate_1:
     
         coordinate_2 = st.text_input("Enter Coordinate 2 : ",placeholder="Y Coordinate")
-        st.snow()
         
     if coordinate_2:
             
@@ -106,10 +105,10 @@ def generate_certificate():
         Red = int(l[0])
         Green = int(l[1])
         Blue = int(l[2])
-        st.snow()
+
         Certificate_Uploader = st.file_uploader("Upload the Certificate : ",type = ["jpg","jpeg","png"])
         st.image(Certificate_Uploader,caption="Your Certificate Template")
-        st.snow()
+
         
     for index,name in enumerate(Name_List_Data):
          
@@ -124,22 +123,17 @@ def generate_certificate():
             
             cv2.imwrite(f'{name}.jpg',image)
             
-            st.write(f'Processing {index + 1} / {len(Name_List_Data)}')
+            st.write(f'Processing {index + 1} / {len(Name_List_Data)}')          
             
         else:
-            print('File not available')      
+            print('File not available')  
 
-
-    st.info("\n !!!!!!!!!!!!!!!! Certificates Saved Successfully !!!!!!!!!!!!!!!!")
-    
-    st.balloons()
-    st.snow()
-                                                
+    st.info("\n !!!!!!!!!!!!!!!! Certificates Generated Successfully !!!!!!!!!!!!!!!!")
+    st.balloons() 
+                
 Name_List()
 
 generate_certificate()
-
-
 
 
 
