@@ -3,6 +3,8 @@ import cv2
 import numpy as np
 from PIL import Image
 import streamlit as st
+import base64
+from io import BytesIO
 
 # Icon & title of the page :
 img = Image.open("13.jpg")
@@ -113,8 +115,11 @@ def generate_certificate():
     for index,name in enumerate(Name_List_Data):
          
         if Certificate_Uploader is not None:
+            
+            file_path = Certificate_Uploader.name
                 
             image = Image.open(Certificate_Uploader)
+            
             image = np.array(image)
     
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -123,17 +128,27 @@ def generate_certificate():
             
             cv2.imwrite(f'{name}.jpg',image)
             
-            st.write(f'Processing {index + 1} / {len(Name_List_Data)}')          
+            st.write(f'Processing  {name}\'s Certificate')
+            
+            def get_image_download_link(img,filename,text):
+                buffered = BytesIO()
+                img.save(buffered, format="JPEG")
+                img_str = base64.b64encode(buffered.getvalue()).decode()
+                href =  f'<a href="data:file/jpg;base64,{img_str}" download="{filename}">{text}</a>'
+                return href
+            
+            image = np.array(image)
+            image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            result = Image.fromarray(image)
+            st.markdown(get_image_download_link(result,file_path,'Download Image'),unsafe_allow_html=True)
             
         else:
             print('File not available')  
 
     st.info("\n !!!!!!!!!!!!!!!! Certificates Generated Successfully !!!!!!!!!!!!!!!!")
     st.balloons() 
-                
+    
 Name_List()
 
 generate_certificate()
-
-
 
