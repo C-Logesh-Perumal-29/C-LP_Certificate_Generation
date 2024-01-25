@@ -52,6 +52,10 @@ BytesIO is used for in-memory file manipulation, allowing seamless processing of
 5. Click the "Generate Certificates" button to process the names and generate certificates.
 6. Download the generated certificates.
 
+## Functionality Spotlight
+
+![Certificate Generation](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/c8b4d9ff-823c-44fa-9f2d-df65927b18e2)
+
 ## Live Project Link
 https://c-lp-certificate-generation-c55m.onrender.com/
 
