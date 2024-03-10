@@ -1,4 +1,4 @@
-
+![Certificate Generation (New)](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/4aa288cb-2c03-4ef4-bcb1-e68bcd86e8eb)
 ![Template](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/b51e61d8-ff9b-4f3d-b95c-c7e6df394b2f)
 
 # Certificate Generation :
@@ -54,7 +54,7 @@ BytesIO is used for in-memory file manipulation, allowing seamless processing of
 
 ## Functionality Spotlight
 
-![Certificate Generation](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/c8b4d9ff-823c-44fa-9f2d-df65927b18e2)
+![Certificate Generation (New)](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/f058b2ad-4f02-42ed-98c6-129e2e08d7e0)
 
 ## Live Project Link
 https://c-lp-certificate-generation-c55m.onrender.com/
