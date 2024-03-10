@@ -1,4 +1,3 @@
-![Certificate Generation (New)](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/4aa288cb-2c03-4ef4-bcb1-e68bcd86e8eb)
 ![Template](https://github.com/C-Logesh-Perumal-29/C-LP_Certificate_Generation/assets/125385633/b51e61d8-ff9b-4f3d-b95c-c7e6df394b2f)
 
 # Certificate Generation :
