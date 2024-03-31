@@ -23,7 +23,7 @@ Background_image = """
 <style>
 [data-testid="stAppViewContainer"] > .main
 {
-background-image: url("https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8616.jpg?t=st=1710070184~exp=1710073784~hmac=1b64d09e720f0c0b866bae342fa5a3c594febde4a3b93ba824dadd650d02d22d&w=996");
+background-image: url("https://img.freepik.com/free-vector/realistic-digital-lavender-background_23-2150595000.jpg?w=996&t=st=1711867421~exp=1711868021~hmac=100f43b1805888a1e6a0b32272183283cdc12b2d276518bd82ba65bd2856bf0c");
 background-size : 100%;
 background-position : top left;
 background-position: center;
@@ -31,7 +31,7 @@ background-size: cover;
 background-repeat : repeat;
 background-repeat: round;
 background-attachment : local;
-background-image: url("https://img.freepik.com/free-photo/artistic-blurry-colorful-wallpaper-background_58702-8616.jpg?t=st=1710070184~exp=1710073784~hmac=1b64d09e720f0c0b866bae342fa5a3c594febde4a3b93ba824dadd650d02d22d&w=996");
+background-image: url("https://img.freepik.com/free-vector/realistic-digital-lavender-background_23-2150595000.jpg?w=996&t=st=1711867421~exp=1711868021~hmac=100f43b1805888a1e6a0b32272183283cdc12b2d276518bd82ba65bd2856bf0c");
 background-position: right bottom;
 background-repeat: no-repeat;
 }  
