@@ -76,10 +76,9 @@ Name_List_Data = []
 def Name_List():
     file_uploader = st.file_uploader("Choose the file", type=['txt'])
     if file_uploader is not None:
-        file_path = file_uploader.name
+        file = file_uploader.read().decode("utf-8").splitlines()
         st.success("File Uploaded Successfully...")
 
-        file = open(file_path, "r")    
         for names in file:
             Name_List_Data.append(names.strip())
             
@@ -111,14 +110,13 @@ def generate_certificate():
     certificate_uploader = st.file_uploader("Upload the Certificate : ", type=["jpg", "jpeg", "png"])
     
     if certificate_uploader is not None:
-        file_path = certificate_uploader.name
+        certificate_image = Image.open(certificate_uploader)
         
         # Display the uploaded certificate image
-        st.image(certificate_uploader, caption="Your Certificate Template")
+        st.image(certificate_image, caption="Your Certificate Template")
         
         for name in Name_List_Data:
-            image = Image.open(certificate_uploader)
-            image = np.array(image)
+            image = np.array(certificate_image)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
             cv2.putText(image, name, (int(coordinate_1), int(coordinate_2)), cv2.FONT_HERSHEY_SIMPLEX, 2,
@@ -138,7 +136,7 @@ def generate_certificate():
             image = np.array(image)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             result = Image.fromarray(image)
-            st.markdown(get_image_download_link(result, file_path, 'Download Image'), unsafe_allow_html=True)
+            st.markdown(get_image_download_link(result, f'{name}.jpg', 'Download Image'), unsafe_allow_html=True)
 
 # Run functions
 Name_List()
