@@ -56,7 +56,7 @@ h = """
                 .title {
                     text-align: center;
                     font-family: 'Engravers MT';
-                    color: white;
+                    color: #333;
                 }
             </style>
         </head>
